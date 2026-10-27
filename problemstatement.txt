@@ -1,0 +1,354 @@
+# Problem Statement: ChatGPT Voice Discovery and Activation Prototype
+
+## 1. Project Overview
+
+**Project Name:** ChatGPT Voice Discovery and Activation  
+**Product:** ChatGPT  
+**Feature:** Proactive and Contextual Voice Nudges  
+**Prototype Tool:** Antigravity AI  
+**Primary Objective:** Increase the discovery and first-time use of ChatGPT's voice input feature among existing users.
+
+ChatGPT users can interact with the product by typing or speaking. However, some users do not know that voice input is available, while others know about it but have never tried it. Some users may also be unsure when voice is useful or may find it difficult to trust speech transcription without reviewing the text.
+
+This project proposes a simple, interactive prototype that helps existing users discover voice input through timely, contextual prompts. Instead of expecting users to find the feature on their own, the interface will highlight voice at relevant moments and explain how it can make interaction easier.
+
+The prototype should demonstrate the complete user journey from seeing a nudge to activating voice input and experiencing a basic voice interaction.
+
+## 2. Problem Statement
+
+Voice input adoption among existing ChatGPT users is lower than expected. According to the research summarized in the PRD, 35% of surveyed users were unaware that the voice feature existed. Among users who were aware of it, only 42% had tried it at least once.
+
+The research identified three major barriers:
+
+1. **Discoverability:** Users may not notice the voice controls or may miss them during onboarding.
+2. **Trust and accuracy:** Users may worry about speech transcription errors or find spoken answers harder to review than written answers.
+3. **Motivation:** Users may not understand when speaking is more convenient than typing.
+
+Students may benefit from hands-free studying, revision, and language practice. Working professionals may benefit from speaking their thoughts, brainstorming, or capturing notes while commuting or multitasking.
+
+The initial prototype will focus on the first barrier—discoverability—and test whether proactive and contextual nudges encourage users to try voice input. Trust and motivation improvements can be considered in later iterations.
+
+## 3. Product Goal
+
+Design a familiar, simple, and interactive ChatGPT-style experience that encourages users who have never tried voice input to use it for the first time.
+
+The prototype should answer three questions:
+
+- Can users notice the voice feature more easily?
+- Do contextual prompts give users a clear reason to try voice?
+- Can users move from the prompt to voice activation without confusion?
+
+The experience should feel like a natural part of ChatGPT rather than a separate application or an intrusive advertisement.
+
+## 4. Target Users
+
+### Persona 1: Student
+
+**Example:** Ananya, 20
+
+- Uses ChatGPT for studying, revision, and learning.
+- May use ChatGPT between classes or while doing other activities.
+- Wants to ask questions without always typing.
+- May not notice the voice controls or understand when to use them.
+
+**User need:** "I want to ask questions quickly, even when typing is inconvenient."
+
+### Persona 2: Working Professional
+
+**Example:** Rohan, 34
+
+- Uses ChatGPT for work-related questions, planning, and brainstorming.
+- May interact with ChatGPT while multitasking.
+- Prefers text when it is easier to skim and verify information.
+- Needs a clear reason to try voice rather than continuing to type.
+
+**User need:** "I want to share my thoughts quickly when I cannot conveniently type."
+
+### Persona 3: Voice-Friendly Professional
+
+**Example:** Priya, 29
+
+- Uses ChatGPT for brainstorming and capturing ideas.
+- May find speaking more natural than typing during a commute or other hands-free activity.
+- Needs the voice feature to be easy to notice and activate.
+
+**User need:** "I want to speak my thoughts naturally without navigating through multiple steps."
+
+These personas represent the user needs described in the PRD. They are design examples, not additional research findings.
+
+## 5. Proposed Solution
+
+Build a clickable prototype with two primary voice discovery mechanisms.
+
+### Solution A: On-Open Nudge
+
+**Trigger:** An existing user opens ChatGPT and has never tried voice input.
+
+**Expected behavior:**
+
+- Display a small, friendly prompt near the voice controls.
+- Use the message: "Try talking instead — just tap and speak."
+- Briefly highlight the relevant voice controls with a subtle animation.
+- Make it clear that the user can tap the control to begin speaking.
+- Allow the user to dismiss the prompt.
+- Avoid displaying the prompt repeatedly after every app opening.
+
+The nudge should help users notice voice without blocking the chat interface or interrupting their task.
+
+### Solution B: Contextual Nudge
+
+**Trigger:** An eligible user types a message containing 15 or more words.
+
+**Expected behavior:**
+
+- Detect when the typed message reaches the 15-word threshold.
+- Display a small contextual prompt near the composer or voice control.
+- Use the message: "Save time — try talking instead."
+- Provide a clear way to access voice input.
+- Keep the user's existing typed message intact.
+- Allow the user to dismiss the prompt and continue typing.
+- Avoid repeatedly displaying the same prompt while the user continues editing the message.
+
+This prompt should feel relevant to the user's current activity rather than appearing randomly.
+
+## 6. Prototype Scope
+
+### Features that must be included
+
+1. A ChatGPT-style home or chat screen.
+2. A message composer with a visible voice input control.
+3. An on-open nudge for a simulated first-time voice user.
+4. A contextual nudge when the user types 15 or more words.
+5. A dismiss action for both nudges.
+6. A voice activation screen or recording state.
+7. A basic microphone permission state.
+8. A recording animation or waveform.
+9. A simulated voice response or successful activation state.
+10. A simple way to restart the journey and test the two triggers.
+
+### Features that are outside the initial scope
+
+- Building or training a real speech-recognition model.
+- Connecting to a production ChatGPT backend.
+- Implementing a complete voice conversation engine.
+- Building the full live-transcription and editable-transcription experience.
+- Implementing paid features or subscription flows.
+- Creating a complete new-user onboarding experience.
+- Adding social-proof statistics that have not been verified.
+
+The prototype should focus on demonstrating the proposed user experience, not recreating the entire ChatGPT product.
+
+## 7. Detailed User Journey
+
+### Journey A: First-Time Voice Discovery
+
+**Step 1: User opens ChatGPT**
+
+The user lands on a familiar chat interface. The prototype identifies this user as someone who has not previously tried voice input.
+
+**Step 2: On-open nudge appears**
+
+A small prompt appears beside the voice control:
+
+"Try talking instead — just tap and speak."
+
+The voice control receives a subtle highlight or animation.
+
+**Step 3: User chooses an action**
+
+The user can:
+
+- Tap the voice control.
+- Dismiss the prompt.
+- Ignore the prompt and continue typing.
+
+**Step 4: Voice activation begins**
+
+If the user taps the voice control, transition to a voice input state. Display a clear indication that the microphone is ready or that permission is required.
+
+**Step 5: User starts speaking**
+
+Show a recording indicator or animated waveform. The prototype can simulate speech capture if real audio input is unavailable.
+
+**Step 6: Activation succeeds**
+
+Display a success state or simulated response that makes it clear the user has successfully tried voice input.
+
+**Expected outcome:** The user understands where voice is located and how to start using it.
+
+### Journey B: Contextual Voice Discovery
+
+**Step 1: User starts typing**
+
+The user enters a message into the chat composer.
+
+**Step 2: Word count reaches 15**
+
+When the message contains 15 or more words, display the contextual nudge:
+
+"Save time — try talking instead."
+
+**Step 3: User decides what to do**
+
+The user can tap the voice control, dismiss the prompt, or continue typing.
+
+**Step 4: User activates voice**
+
+If the user chooses voice, show the voice activation or recording state. Preserve the typed draft unless the user explicitly chooses to clear or replace it.
+
+**Step 5: Voice interaction completes**
+
+Show a simulated successful voice interaction.
+
+**Expected outcome:** The user sees voice as an alternative when composing a longer message.
+
+## 8. Functional Requirements
+
+### FR-1: First-Time User Identification
+
+The prototype must simulate whether the user has tried voice input before.
+
+- First-time voice users should be eligible for the on-open nudge.
+- Returning voice users should not see the first-time nudge.
+- A simple local state or test control may be used to simulate this behavior.
+
+### FR-2: On-Open Nudge
+
+- Show the nudge when an eligible user opens the chat screen.
+- Display the exact approved message.
+- Highlight the voice control subtly.
+- Allow dismissal.
+- Prevent the prompt from reappearing on every render or state update.
+
+### FR-3: Word-Count Detection
+
+- Count words in the user's typed message.
+- Trigger the contextual nudge when the count reaches 15.
+- Do not trigger before the threshold.
+- Update the behavior if the user edits the message.
+- Avoid duplicate or continuously repeated prompts.
+
+### FR-4: Nudge Interaction
+
+- Tapping the voice control should open the voice experience.
+- Dismissing a nudge should remove it without clearing the user's draft.
+- The user should be able to continue typing normally.
+- The nudges must not block access to the normal chat composer.
+
+### FR-5: Voice Activation
+
+- Show a clear transition from the chat interface to voice input.
+- Provide a microphone permission state.
+- Show recording feedback when voice input is active.
+- Provide a cancel or back action.
+- Display a clear outcome after simulated voice activation.
+
+### FR-6: Prototype State Management
+
+- Maintain the user's current message while prompts appear or disappear.
+- Track whether the first-use nudge has been dismissed or voice has been activated.
+- Provide a test/reset mechanism so reviewers can experience the first-time journey again.
+- Keep the two nudge journeys independently testable.
+
+## 9. User Interface Requirements
+
+The prototype should resemble a modern conversational AI application.
+
+### Visual direction
+
+- Use a clean, familiar chat layout.
+- Keep the message composer at the bottom of the screen.
+- Make the voice control easy to identify.
+- Use restrained colors, simple typography, and subtle motion.
+- Keep prompts small and contextual.
+- Use clear spacing and readable text.
+- Make the prototype responsive to different screen sizes.
+- Ensure prompts do not cover the user's message or important controls.
+
+### Interaction principles
+
+- Every visible button should perform an action.
+- Users should understand why a prompt has appeared.
+- Dismissal should be easy.
+- The user should never feel forced to use voice.
+- The existing typing experience must remain available.
+
+## 10. Success Metrics
+
+The PRD proposes the following goals for the broader product initiative.
+
+### Primary metric: Voice Activation Rate
+
+The percentage of users who are aware of voice and have tried it at least once.
+
+**Proposed goal:** Increase activation from 42% to 52% within three months, as stated in the source PRD.
+
+### Secondary metrics
+
+- Voice awareness among existing users.
+- Average session time among voice users.
+- Prompt-to-voice conversion: the percentage of users who start voice after seeing a nudge.
+- Prompt dismissal rate.
+- Repeated exposure to nudges.
+
+### Quality guardrails
+
+- Transcription accuracy.
+- Voice response latency.
+- Voice-session errors or failures.
+- User frustration caused by repeated prompts.
+
+These are product-level measures. The prototype itself should demonstrate how the user journey works; it cannot prove that the proposed activation target will be achieved.
+
+## 11. Prototype Acceptance Criteria
+
+The prototype will be considered ready for review when:
+
+1. A first-time voice user can open the chat screen and see the on-open nudge.
+2. The nudge appears with the correct message and a visible voice control.
+3. The user can dismiss the nudge without disrupting the chat.
+4. The contextual nudge appears at 15 words or more.
+5. The contextual nudge does not appear before the threshold.
+6. The user's typed message remains intact when the contextual nudge appears.
+7. Tapping the voice control opens the voice activation state.
+8. The prototype demonstrates microphone permission, recording, cancellation, and successful activation states.
+9. Returning users can be simulated without showing the first-time nudge.
+10. A reviewer can reset the prototype and test both journeys again.
+11. All buttons and interactions work as intended.
+12. The experience works at desktop and mobile viewport sizes.
+
+## 12. Technical Expectations for Antigravity
+
+Build the prototype as a working front-end application with reusable components and clear state management.
+
+Suggested components:
+
+- `ChatScreen`
+- `MessageComposer`
+- `VoiceControl`
+- `OnOpenNudge`
+- `ContextualNudge`
+- `VoiceActivationScreen`
+- `MicrophonePermissionState`
+- `RecordingIndicator`
+- `VoiceSuccessState`
+- `PrototypeControls`
+
+Use simulated data and local application state where backend services are unnecessary. Do not claim that real speech recognition, ChatGPT responses, or production analytics are connected unless they actually are.
+
+Keep the implementation simple, readable, and easy to modify. The primary goal is a polished, clickable prototype for product review and user testing.
+
+## 13. Final Deliverable
+
+Create an interactive prototype that clearly demonstrates two experiences:
+
+1. **First-time discovery:** A nudge appears when a user opens ChatGPT, helping them discover the voice control.
+2. **Contextual discovery:** A nudge appears when a user types a long message, suggesting voice as a faster alternative.
+
+The prototype should let a reviewer move through the complete experience, test the different states, dismiss prompts, activate voice, and restart the journey.
+
+**Core product principle:** Help users discover voice at the right moment, explain its value simply, and let them choose whether to use it—without interrupting their normal ChatGPT experience.
+
+
+
+crate backend and front end in one, so that i can upload in vercal in on go, the size should also be not too big
